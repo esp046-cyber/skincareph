@@ -1,0 +1,1472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filipino Skincare Guide</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #FFF5E1 0%, #FFE4B5 100%);
+            min-height: 100vh;
+            padding: 1%;
+        }
+
+        .container {
+            max-width: 500px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #D4A574 0%, #8B6F47 100%);
+            padding: 15px 1%;
+            text-align: center;
+            color: white;
+        }
+
+        .header h1 {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 3px;
+        }
+
+        .header p {
+            font-size: 11px;
+            opacity: 0.9;
+        }
+
+        .nav-tabs {
+            display: flex;
+            background: #F5DEB3;
+            padding: 1%;
+            gap: 1%;
+        }
+
+        .tab {
+            flex: 1;
+            padding: 10px;
+            background: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 12px;
+            font-weight: 600;
+            color: #8B6F47;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .tab.active {
+            background: #D4A574;
+            color: white;
+        }
+
+        .content {
+            padding: 1%;
+            max-height: calc(100vh - 200px);
+            overflow-y: auto;
+        }
+
+        .section {
+            display: none;
+            animation: fadeIn 0.3s;
+        }
+
+        .section.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .card {
+            background: #FFF8DC;
+            border-radius: 15px;
+            padding: 12px;
+            margin-bottom: 1%;
+            border-left: 4px solid #D4A574;
+        }
+
+        .card h3 {
+            font-size: 14px;
+            color: #8B6F47;
+            margin-bottom: 6px;
+        }
+
+        .card p {
+            font-size: 12px;
+            color: #5D4E37;
+            line-height: 1.5;
+        }
+
+        .ingredient-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1%;
+        }
+
+        .ingredient-item {
+            background: linear-gradient(135deg, #FFE4B5 0%, #FFDAB9 100%);
+            border-radius: 12px;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .ingredient-icon {
+            font-size: 28px;
+            margin-bottom: 5px;
+        }
+
+        .ingredient-item h4 {
+            font-size: 12px;
+            color: #8B6F47;
+            margin-bottom: 3px;
+        }
+
+        .ingredient-item p {
+            font-size: 10px;
+            color: #5D4E37;
+        }
+
+        .routine-step {
+            display: flex;
+            align-items: flex-start;
+            background: white;
+            border-radius: 12px;
+            padding: 10px;
+            margin-bottom: 1%;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        .step-number {
+            background: #D4A574;
+            color: white;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 12px;
+            flex-shrink: 0;
+            margin-right: 10px;
+        }
+
+        .step-content h4 {
+            font-size: 13px;
+            color: #8B6F47;
+            margin-bottom: 3px;
+        }
+
+        .step-content p {
+            font-size: 11px;
+            color: #5D4E37;
+            line-height: 1.4;
+        }
+
+        .tip-box {
+            background: linear-gradient(135deg, #E6D5B8 0%, #D4A574 100%);
+            color: white;
+            padding: 12px;
+            border-radius: 12px;
+            margin-top: 1%;
+            font-size: 11px;
+            line-height: 1.5;
+        }
+
+        .tip-box strong {
+            display: block;
+            margin-bottom: 5px;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🌺 Filipino Skincare Guide 🌺</h1>
+            <p>Morena Beauty & Natural Glow</p>
+        </div>
+
+        <div class="nav-tabs">
+            <button class="tab active" onclick="showSection('home')">Home</button>
+            <button class="tab" onclick="showSection('ingredients')">Ingredients</button>
+            <button class="tab" onclick="showSection('routine')">Routine</button>
+            <button class="tab" onclick="showSection('tips')">Tips</button>
+        </div>
+
+        <div class="content">
+            <div id="home" class="section active">
+                <div class="card">
+                    <h3>🌞 Embrace Your Morena Skin</h3>
+                    <p>Filipino skin is naturally beautiful and resilient. This guide helps you enhance your natural glow with ingredients perfect for our tropical climate.</p>
+                </div>
+
+                <div class="card">
+                    <h3>☀️ Sun Protection is Essential</h3>
+                    <p>Our Philippine sun is strong! Daily SPF 50+ is a must to prevent dark spots and maintain healthy skin. Reapply every 2-3 hours when outdoors.</p>
+                </div>
+
+                <div class="card">
+                    <h3>💧 Hydration in Humid Climate</h3>
+                    <p>Balance is key in our humid weather. Use lightweight, water-based products that won't clog pores while keeping skin moisturized.</p>
+                </div>
+
+                <div class="card">
+                    <h3>🌿 Natural Filipino Ingredients</h3>
+                    <p>Papaya, calamansi, coconut oil, and rice water have been used for generations. These natural remedies are gentle and effective for brightening and nourishing skin.</p>
+                </div>
+
+                <div class="card">
+                    <h3>✨ Understanding Your Skin Type</h3>
+                    <p>Most Filipinos have combination to oily skin due to our climate. Know your skin type to choose the right products. Oily skin needs oil-control, dry skin needs hydration, and sensitive skin needs gentle formulas.</p>
+                </div>
+
+                <div class="card">
+                    <h3>🌸 Preventing Dark Spots</h3>
+                    <p>Hyperpigmentation is common in morena skin. Prevent it by using sunscreen daily, avoiding picking at pimples, and using brightening ingredients like niacinamide and vitamin C.</p>
+                </div>
+
+                <div class="card">
+                    <h3>💦 Importance of Double Cleansing</h3>
+                    <p>With our humid weather and pollution, double cleansing removes all dirt, oil, and sunscreen. Start with oil-based cleanser, then follow with water-based cleanser for truly clean skin.</p>
+                </div>
+
+                <div class="card">
+                    <h3>🧘‍♀️ Stress and Your Skin</h3>
+                    <p>Stress causes breakouts and dullness. Practice self-care, get enough sleep, and maintain a consistent skincare routine. Your mental health affects your skin health.</p>
+                </div>
+
+                <div class="card">
+                    <h3>🌡️ Temperature Changes</h3>
+                    <p>Going from hot outdoors to cold aircon can shock skin. Always moisturize before entering AC rooms. Keep a hydrating mist in your bag for quick refreshment.</p>
+                </div>
+
+                <div class="card">
+                    <h3>🧪 Patch Testing New Products</h3>
+                    <p>Before using new products on face, test on inner arm for 24-48 hours. This prevents allergic reactions and irritation, especially for sensitive morena skin.</p>
+                </div>
+
+                <div class="card">
+                    <h3>👶 Starting Skincare Young</h3>
+                    <p>It's never too early to start! Teens should focus on gentle cleansing, sunscreen, and treating acne. Build good habits early for lifelong healthy skin.</p>
+                </div>
+
+                <div class="card">
+                    <h3>🌙 Nighttime is Repair Time</h3>
+                    <p>Skin regenerates at night. Use heavier products before bed. Retinol, peptides, and overnight masks work best during sleep when skin is in repair mode.</p>
+                </div>
+
+                <div class="card">
+                    <h3>💰 Affordable Filipino Brands</h3>
+                    <p>Support local! Brands like Human Nature, Luxe Organix, and Fresh Formula offer quality products made for Filipino skin at affordable prices. Check ingredients, not just price tags.</p>
+                </div>
+
+                <div class="card">
+                    <h3>🔄 Product Rotation</h3>
+                    <p>Don't introduce all products at once. Add one new product every 2 weeks to monitor effects. This helps identify what works and what causes reactions.</p>
+                </div>
+
+                <div class="card">
+                    <h3>🌊 Ocean Benefits</h3>
+                    <p>Sea water has minerals that benefit skin. After beach trips, rinse with fresh water and moisturize. Salt can be drying but temporary glow is real!</p>
+                </div>
+
+                <div class="card">
+                    <h3>🏃‍♀️ Exercise for Glow</h3>
+                    <p>Regular exercise increases blood flow, giving natural flush. Sweating detoxifies pores. Just cleanse immediately after to prevent breakouts from trapped sweat.</p>
+                </div>
+
+                <div class="card">
+                    <h3>🎭 Cultural Beauty Standards</h3>
+                    <p>Love your morena skin! Filipino beauty is diverse. Skincare is about health, not changing your natural color. Embrace your natural kayumanggi glow.</p>
+                </div>
+
+                <div class="card">
+                    <h3>🧴 Layering Products Correctly</h3>
+                    <p>Apply thinnest to thickest: toner, essence, serum, moisturizer, sunscreen. Wait 30-60 seconds between layers for better absorption.</p>
+                </div>
+
+                <div class="card">
+                    <h3>🌡️ Seasonal Adjustments</h3>
+                    <p>Dry season (March-May) needs more hydration. Rainy season (June-November) needs oil control. Adjust products based on weather changes.</p>
+                </div>
+
+                <div class="card">
+                    <h3>👃 Fragrance-Free Benefits</h3>
+                    <p>Fragranced products can irritate sensitive skin. Choose fragrance-free or naturally scented products, especially for facial skincare.</p>
+                </div>
+
+                <div class="card">
+                    <h3>🔬 Active Ingredients Timing</h3>
+                    <p>Use vitamin C in morning for antioxidant protection. Use retinol at night as it's photosensitive. Never mix retinol with AHA/BHA or vitamin C.</p>
+                </div>
+
+                <div class="card">
+                    <h3>🌤️ Indoor Sun Exposure</h3>
+                    <p>Windows don't fully block UV rays. If you work by windows or in bright rooms, wear sunscreen indoors. UVA rays penetrate glass and cause aging.</p>
+                </div>
+
+                <div class="card">
+                    <h3>🧘 Face Yoga Benefits</h3>
+                    <p>Facial exercises tone muscles and improve circulation. Try cheek lifts, forehead smoothers, and jaw exercises. 5 minutes daily can reduce sagging.</p>
+                </div>
+
+                <div class="card">
+                    <h3>💍 Jewelry & Skin Reactions</h3>
+                    <p>Nickel allergies cause rashes. Wear hypoallergenic jewelry. Remove jewelry before applying skincare products to avoid buildup and irritation.</p>
+                </div>
+
+                <div class="card">
+                    <h3>🎬 K-Beauty vs Filipino Skin</h3>
+                    <p>Korean skincare is popular but adapt to our climate. Use lighter formulas, skip heavy creams in daytime. Focus on hydration and sun protection.</p>
+                </div>
+
+                <div class="card">
+                    <h3>🌈 Skin pH Balance</h3>
+                    <p>Healthy skin pH is 4.5-5.5 (slightly acidic). Use pH-balanced cleansers. Alkaline soaps disrupt barrier. Toners restore proper pH levels.</p>
+                </div>
+
+                <div class="card">
+                    <h3>🚿 Shower Temperature Tips</h3>
+                    <p>Hot showers feel good but damage skin. Use lukewarm water for bathing. Hot water strips natural oils, causing dryness and irritation.</p>
+                </div>
+
+                <div class="card">
+                    <h3>🏝️ Provincial Living Benefits</h3>
+                    <p>Less pollution means clearer skin. Province dwellers enjoy fresher air and water. City residents need extra cleansing and antioxidant protection.</p>
+                </div>
+
+                <div class="card">
+                    <h3>🎒 Student Skincare Budget</h3>
+                    <p>Students can afford good skincare! Prioritize cleanser and sunscreen. Use drugstore brands. DIY masks from kitchen. Quality over quantity always.</p>
+                </div>
+
+                <div class="card">
+                    <h3>👔 Men's Skincare Basics</h3>
+                    <p>Filipino men need skincare too! Cleanser, moisturizer, sunscreen are essentials. After-shave care prevents irritation. Healthy skin is masculine.</p>
+                </div>
+
+                <div class="card">
+                    <h3>🤰 Pregnancy Skincare Safety</h3>
+                    <p>Avoid retinoids, salicylic acid, and hydroquinone when pregnant. Stick to gentle products. Melasma common during pregnancy—extra sun protection needed.</p>
+                </div>
+
+                <div class="card">
+                    <h3>🏊 Chlorine Protection</h3>
+                    <p>Before swimming, wet hair and apply conditioner—creates barrier. After pool, shower immediately with chelating shampoo. Moisturize heavily post-swim.</p>
+                </div>
+            </div>
+
+            <div id="ingredients" class="section">
+                <div class="ingredient-grid">
+                    <div class="ingredient-item">
+                        <div class="ingredient-icon">🥥</div>
+                        <h4>Coconut Oil</h4>
+                        <p>Deep moisturizer, antibacterial properties</p>
+                    </div>
+
+                    <div class="ingredient-item">
+                        <div class="ingredient-icon">🍈</div>
+                        <h4>Papaya</h4>
+                        <p>Natural exfoliant, brightens skin tone</p>
+                    </div>
+
+                    <div class="ingredient-item">
+                        <div class="ingredient-icon">🍋</div>
+                        <h4>Calamansi</h4>
+                        <p>Vitamin C, reduces dark spots</p>
+                    </div>
+
+                    <div class="ingredient-item">
+                        <div class="ingredient-icon">🍚</div>
+                        <h4>Rice Water</h4>
+                        <p>Brightens, tightens pores</p>
+                    </div>
+
+                    <div class="ingredient-item">
+                        <div class="ingredient-icon">🥒</div>
+                        <h4>Cucumber</h4>
+                        <p>Soothes, reduces puffiness</p>
+                    </div>
+
+                    <div class="ingredient-item">
+                        <div class="ingredient-icon">🍯</div>
+                        <h4>Honey</h4>
+                        <p>Antibacterial, moisturizing</p>
+                    </div>
+
+                    <div class="ingredient-item">
+                        <div class="ingredient-icon">🥑</div>
+                        <h4>Avocado</h4>
+                        <p>Nourishes, rich in vitamins</p>
+                    </div>
+
+                    <div class="ingredient-item">
+                        <div class="ingredient-icon">🌼</div>
+                        <h4>Sampaguita</h4>
+                        <p>Soothes, anti-inflammatory</p>
+                    </div>
+
+                    <div class="ingredient-item">
+                        <div class="ingredient-icon">🍃</div>
+                        <h4>Aloe Vera</h4>
+                        <p>Heals, calms irritation</p>
+                    </div>
+
+                    <div class="ingredient-item">
+                        <div class="ingredient-icon">🫒</div>
+                        <h4>Olive Oil</h4>
+                        <p>Antioxidant, anti-aging</p>
+                    </div>
+
+                    <div class="ingredient-item">
+                        <div class="ingredient-icon">🥛</div>
+                        <h4>Carabao Milk</h4>
+                        <p>Whitens, moisturizes</p>
+                    </div>
+
+                    <div class="ingredient-item">
+                        <div class="ingredient-icon">🍊</div>
+                        <h4>Dalandan</h4>
+                        <p>Vitamin C, brightens</p>
+                    </div>
+
+                    <div class="ingredient-item">
+                        <div class="ingredient-icon">🌱</div>
+                        <h4>Malunggay</h4>
+                        <p>Vitamin-rich, nourishes</p>
+                    </div>
+
+                    <div class="ingredient-item">
+                        <div class="ingredient-icon">🍌</div>
+                        <h4>Banana</h4>
+                        <p>Moisturizes, reduces acne</p>
+                    </div>
+
+                    <div class="ingredient-item">
+                        <div class="ingredient-icon">🌿</div>
+                        <h4>Pandan</h4>
+                        <p>Aromatic, anti-bacterial</p>
+                    </div>
+
+                    <div class="ingredient-item">
+                        <div class="ingredient-icon">🥥</div>
+                        <h4>Buko Water</h4>
+                        <p>Hydrates, electrolytes</p>
+                    </div>
+
+                    <div class="ingredient-item">
+                        <div class="ingredient-icon">☕</div>
+                        <h4>Cacao</h4>
+                        <p>Antioxidant, firms skin</p>
+                    </div>
+
+                    <div class="ingredient-item">
+                        <div class="ingredient-icon">🌺</div>
+                        <h4>Gumamela</h4>
+                        <p>Natural conditioner, shine</p>
+                    </div>
+
+                    <div class="ingredient-item">
+                        <div class="ingredient-icon">🫚</div>
+                        <h4>Luya (Ginger)</h4>
+                        <p>Anti-inflammatory, brightens</p>
+                    </div>
+
+                    <div class="ingredient-item">
+                        <div class="ingredient-icon">🌿</div>
+                        <h4>Guava Leaves</h4>
+                        <p>Treats acne, antibacterial</p>
+                    </div>
+
+                    <div class="ingredient-item">
+                        <div class="ingredient-icon">🥭</div>
+                        <h4>Mango</h4>
+                        <p>Vitamin A, exfoliates</p>
+                    </div>
+
+                    <div class="ingredient-item">
+                        <div class="ingredient-icon">🍠</div>
+                        <h4>Kamote (Sweet Potato)</h4>
+                        <p>Beta-carotene, anti-aging</p>
+                    </div>
+
+                    <div class="ingredient-item">
+                        <div class="ingredient-icon">🌶️</div>
+                        <h4>Siling Labuyo</h4>
+                        <p>Boosts circulation, plumps</p>
+                    </div>
+
+                    <div class="ingredient-item">
+                        <div class="ingredient-icon">🍵</div>
+                        <h4>Tsaa (Tea)</h4>
+                        <p>Tightens pores, antioxidant</p>
+                    </div>
+
+                    <div class="ingredient-item">
+                        <div class="ingredient-icon">🌾</div>
+                        <h4>Gugo Bark</h4>
+                        <p>Cleanses, natural shampoo</p>
+                    </div>
+
+                    <div class="ingredient-item">
+                        <div class="ingredient-icon">🍋</div>
+                        <h4>Dayap</h4>
+                        <p>Astringent, oil control</p>
+                    </div>
+
+                    <div class="ingredient-item">
+                        <div class="ingredient-icon">🥜</div>
+                        <h4>Peanut Oil</h4>
+                        <p>Softens skin, vitamin E</p>
+                    </div>
+
+                    <div class="ingredient-item">
+                        <div class="ingredient-icon">🍂</div>
+                        <h4>Sambong</h4>
+                        <p>Detoxifies, reduces swelling</p>
+                    </div>
+
+                    <div class="ingredient-item">
+                        <div class="ingredient-icon">🍈</div>
+                        <h4>Kundol (Winter Melon)</h4>
+                        <p>Hydrates, cools skin</p>
+                    </div>
+
+                    <div class="ingredient-item">
+                        <div class="ingredient-icon">🌰</div>
+                        <h4>Pili Nut</h4>
+                        <p>Rich in nutrients, moisturizes</p>
+                    </div>
+
+                    <div class="ingredient-item">
+                        <div class="ingredient-icon">🥥</div>
+                        <h4>Nata de Coco</h4>
+                        <p>Hydrating, gel-like texture</p>
+                    </div>
+
+                    <div class="ingredient-item">
+                        <div class="ingredient-icon">🌸</div>
+                        <h4>Ylang-Ylang</h4>
+                        <p>Balances oil, aromatic</p>
+                    </div>
+
+                    <div class="ingredient-item">
+                        <div class="ingredient-icon">🍊</div>
+                        <h4>Suha (Pomelo)</h4>
+                        <p>Vitamin C, refreshing</p>
+                    </div>
+
+                    <div class="ingredient-item">
+                        <div class="ingredient-icon">🌿</div>
+                        <h4>Lagundi</h4>
+                        <p>Anti-inflammatory, healing</p>
+                    </div>
+
+                    <div class="ingredient-item">
+                        <div class="ingredient-icon">🍃</div>
+                        <h4>Mint (Yerba Buena)</h4>
+                        <p>Cooling, refreshes skin</p>
+                    </div>
+
+                    <div class="ingredient-item">
+                        <div class="ingredient-icon">🥥</div>
+                        <h4>Coconut Milk</h4>
+                        <p>Nourishes, softens skin</p>
+                    </div>
+
+                    <div class="ingredient-item">
+                        <div class="ingredient-icon">🌾</div>
+                        <h4>Corn Silk</h4>
+                        <p>Soothes, anti-irritant</p>
+                    </div>
+
+                    <div class="ingredient-item">
+                        <div class="ingredient-icon">🍋</div>
+                        <h4>Lemongrass</h4>
+                        <p>Astringent, antibacterial</p>
+                    </div>
+
+                    <div class="ingredient-item">
+                        <div class="ingredient-icon">🌺</div>
+                        <h4>Santan (Coconut Cream)</h4>
+                        <p>Deep conditioning, repairs</p>
+                    </div>
+
+                    <div class="ingredient-item">
+                        <div class="ingredient-icon">🫘</div>
+                        <h4>Mung Bean</h4>
+                        <p>Exfoliates, detoxifies</p>
+                    </div>
+
+                    <div class="ingredient-item">
+                        <div class="ingredient-icon">🧄</div>
+                        <h4>Bawang (Garlic)</h4>
+                        <p>Antibacterial, treats acne</p>
+                    </div>
+
+                    <div class="ingredient-item">
+                        <div class="ingredient-icon">🥔</div>
+                        <h4>Potato</h4>
+                        <p>Brightens, reduces circles</p>
+                    </div>
+
+                    <div class="ingredient-item">
+                        <div class="ingredient-icon">🍅</div>
+                        <h4>Kamatis (Tomato)</h4>
+                        <p>Tightens pores, lycopene</p>
+                    </div>
+
+                    <div class="ingredient-item">
+                        <div class="ingredient-icon">🍐</div>
+                        <h4>Atis (Sugar Apple)</h4>
+                        <p>Vitamin C, rejuvenates</p>
+                    </div>
+
+                    <div class="ingredient-item">
+                        <div class="ingredient-icon">🌾</div>
+                        <h4>Tanglad (Lemongrass)</h4>
+                        <p>Purifies, tones skin</p>
+                    </div>
+
+                    <div class="ingredient-item">
+                        <div class="ingredient-icon">🍈</div>
+                        <h4>Melon</h4>
+                        <p>Hydrates, vitamins A & C</p>
+                    </div>
+
+                    <div class="ingredient-item">
+                        <div class="ingredient-icon">🌿</div>
+                        <h4>Oregano</h4>
+                        <p>Antibacterial, fights acne</p>
+                    </div>
+
+                    <div class="ingredient-item">
+                        <div class="ingredient-icon">🥥</div>
+                        <h4>Coco Coir</h4>
+                        <p>Exfoliates, natural scrub</p>
+                    </div>
+
+                    <div class="ingredient-item">
+                        <div class="ingredient-icon">🌺</div>
+                        <h4>Kalachuchi</h4>
+                        <p>Soothes, fragrant</p>
+                    </div>
+
+                    <div class="ingredient-item">
+                        <div class="ingredient-icon">🍋</div>
+                        <h4>Pomelo Peel</h4>
+                        <p>Brightens, antioxidant</p>
+                    </div>
+
+                    <div class="ingredient-item">
+                        <div class="ingredient-icon">🌱</div>
+                        <h4>Alugbati (Malabar Spinach)</h4>
+                        <p>Vitamin-rich, nourishes</p>
+                    </div>
+
+                    <div class="ingredient-item">
+                        <div class="ingredient-icon">🥜</div>
+                        <h4>Cashew</h4>
+                        <p>Minerals, softens skin</p>
+                    </div>
+
+                    <div class="ingredient-item">
+                        <div class="ingredient-icon">🍃</div>
+                        <h4>Bay Leaf (Laurel)</h4>
+                        <p>Astringent, anti-fungal</p>
+                    </div>
+
+                    <div class="ingredient-item">
+                        <div class="ingredient-icon">🫚</div>
+                        <h4>Turmeric (Luyang Dilaw)</h4>
+                        <p>Anti-inflammatory, brightens</p>
+                    </div>
+
+                    <div class="ingredient-item">
+                        <div class="ingredient-icon">🥥</div>
+                        <h4>Coconut Husk</h4>
+                        <p>Exfoliant, eco-friendly</p>
+                    </div>
+
+                    <div class="ingredient-item">
+                        <div class="ingredient-icon">🌿</div>
+                        <h4>Basil (Balanoy)</h4>
+                        <p>Antioxidant, purifies</p>
+                    </div>
+
+                    <div class="ingredient-item">
+                        <div class="ingredient-icon">🍊</div>
+                        <h4>Orange Peel</h4>
+                        <p>Vitamin C, exfoliates</p>
+                    </div>
+
+                    <div class="ingredient-item">
+                        <div class="ingredient-icon">🫒</div>
+                        <h4>Sesame Oil</h4>
+                        <p>Nourishes, anti-aging</p>
+                    </div>
+
+                    <div class="ingredient-item">
+                        <div class="ingredient-icon">🌰</div>
+                        <h4>Macadamia</h4>
+                        <p>Deeply moisturizes</p>
+                    </div>
+
+                    <div class="ingredient-item">
+                        <div class="ingredient-icon">🍃</div>
+                        <h4>Tawa-Tawa</h4>
+                        <p>Healing, traditional herb</p>
+                    </div>
+
+                    <div class="ingredient-item">
+                        <div class="ingredient-icon">🥥</div>
+                        <h4>Buko Juice Powder</h4>
+                        <p>Instant hydration boost</p>
+                    </div>
+
+                    <div class="ingredient-item">
+                        <div class="ingredient-icon">🌺</div>
+                        <h4>Hibiscus</h4>
+                        <p>Natural AHA, anti-aging</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="routine" class="section">
+                <h3 style="font-size: 14px; color: #8B6F47; margin-bottom: 10px; padding-left: 1%;">Morning Routine</h3>
+                
+                <div class="routine-step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h4>Gentle Cleanser</h4>
+                        <p>Use a mild, pH-balanced cleanser. Avoid harsh soaps that strip natural oils.</p>
+                    </div>
+                </div>
+
+                <div class="routine-step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h4>Toner</h4>
+                        <p>Apply rice water or witch hazel to balance pH and tighten pores.</p>
+                    </div>
+                </div>
+
+                <div class="routine-step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h4>Serum/Essence</h4>
+                        <p>Lightweight vitamin C or niacinamide for brightening and protection.</p>
+                    </div>
+                </div>
+
+                <div class="routine-step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h4>Moisturizer</h4>
+                        <p>Light, gel-based moisturizer perfect for humid weather.</p>
+                    </div>
+                </div>
+
+                <div class="routine-step">
+                    <div class="step-number">5</div>
+                    <div class="step-content">
+                        <h4>Sunscreen SPF 50+</h4>
+                        <p>Most important step! Apply generously 15 minutes before going out.</p>
+                    </div>
+                </div>
+
+                <h3 style="font-size: 14px; color: #8B6F47; margin: 15px 0 10px 1%;">Evening Routine</h3>
+
+                <div class="routine-step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h4>Oil Cleanser/Micellar Water</h4>
+                        <p>Remove makeup and sunscreen thoroughly.</p>
+                    </div>
+                </div>
+
+                <div class="routine-step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h4>Gentle Cleanser</h4>
+                        <p>Double cleanse to ensure all impurities are removed.</p>
+                    </div>
+                </div>
+
+                <div class="routine-step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h4>Exfoliate (2-3x weekly)</h4>
+                        <p>Use papaya enzyme or gentle AHA/BHA for smooth, bright skin.</p>
+                    </div>
+                </div>
+
+                <div class="routine-step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h4>Treatment/Serum</h4>
+                        <p>Apply targeted treatments for dark spots or acne.</p>
+                    </div>
+                </div>
+
+                <div class="routine-step">
+                    <div class="step-number">5</div>
+                    <div class="step-content">
+                        <h4>Night Moisturizer</h4>
+                        <p>Richer cream to repair and hydrate overnight.</p>
+                    </div>
+                </div>
+
+                <h3 style="font-size: 14px; color: #8B6F47; margin: 15px 0 10px 1%;">Weekly Treatments</h3>
+
+                <div class="routine-step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h4>Clay Mask (Once Weekly)</h4>
+                        <p>Use bentonite or kaolin clay to deep clean pores and control oil production.</p>
+                    </div>
+                </div>
+
+                <div class="routine-step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h4>Sheet Mask (2-3x Weekly)</h4>
+                        <p>Hydrating sheet masks with hyaluronic acid or brightening ingredients for extra glow.</p>
+                    </div>
+                </div>
+
+                <div class="routine-step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h4>Facial Massage</h4>
+                        <p>Use coconut or grapeseed oil for 5-10 minute facial massage to improve circulation.</p>
+                    </div>
+                </div>
+
+                <div class="routine-step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h4>Lip & Hand Care</h4>
+                        <p>Exfoliate lips with sugar scrub, moisturize hands with thick cream before bed.</p>
+                    </div>
+                </div>
+
+                <div class="routine-step">
+                    <div class="step-number">5</div>
+                    <div class="step-content">
+                        <h4>Hair Mask</h4>
+                        <p>Coconut oil or argan oil hair mask to nourish scalp and strengthen hair.</p>
+                    </div>
+                </div>
+
+                <h3 style="font-size: 14px; color: #8B6F47; margin: 15px 0 10px 1%;">Special Treatments</h3>
+
+                <div class="routine-step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h4>Brightening Treatment</h4>
+                        <p>Use kojic acid or alpha arbutin serum 3-4 times weekly for dark spots and even skin tone.</p>
+                    </div>
+                </div>
+
+                <div class="routine-step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h4>Acne Spot Treatment</h4>
+                        <p>Apply benzoyl peroxide or tea tree oil directly on pimples. Use only on affected areas.</p>
+                    </div>
+                </div>
+
+                <div class="routine-step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h4>Eye Care Routine</h4>
+                        <p>Gently pat eye cream around orbital bone. Use products with caffeine to reduce puffiness.</p>
+                    </div>
+                </div>
+
+                <div class="routine-step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h4>Neck & Décolletage</h4>
+                        <p>Don't forget these areas! Apply same products as face, using upward motions.</p>
+                    </div>
+                </div>
+
+                <div class="routine-step">
+                    <div class="step-number">5</div>
+                    <div class="step-content">
+                        <h4>Body Exfoliation</h4>
+                        <p>Use body scrub 2x weekly. Focus on elbows, knees, and feet. Follow with body lotion.</p>
+                    </div>
+                </div>
+
+                <div class="routine-step">
+                    <div class="step-number">6</div>
+                    <div class="step-content">
+                        <h4>Underarm Care</h4>
+                        <p>Exfoliate gently, use aluminum-free deodorant. Apply vitamin C or niacinamide for brightening.</p>
+                    </div>
+                </div>
+
+                <h3 style="font-size: 14px; color: #8B6F47; margin: 15px 0 10px 1%;">Monthly Deep Care</h3>
+
+                <div class="routine-step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h4>Professional Facial</h4>
+                        <p>Visit dermatologist or esthetician monthly for deep cleaning and professional treatments.</p>
+                    </div>
+                </div>
+
+                <div class="routine-step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h4>Tool Cleaning</h4>
+                        <p>Deep clean makeup brushes, sponges, and skincare tools. Replace old products past expiration.</p>
+                    </div>
+                </div>
+
+                <div class="routine-step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h4>Skin Assessment</h4>
+                        <p>Take progress photos. Evaluate what's working and adjust routine as needed for better results.</p>
+                    </div>
+                </div>
+
+                <h3 style="font-size: 14px; color: #8B6F47; margin: 15px 0 10px 1%;">DIY Filipino Treatments</h3>
+
+                <div class="routine-step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h4>Papaya Face Mask</h4>
+                        <p>Mash ripe papaya, apply for 15 minutes. Rinse with cool water. Natural enzymes brighten and exfoliate gently.</p>
+                    </div>
+                </div>
+
+                <div class="routine-step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h4>Calamansi Toner</h4>
+                        <p>Mix 1 part calamansi juice with 3 parts water. Apply with cotton pad. Use only at night, not for sensitive skin.</p>
+                    </div>
+                </div>
+
+                <div class="routine-step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h4>Coconut Oil Treatment</h4>
+                        <p>Warm virgin coconut oil, massage into skin or hair. Leave 30 minutes or overnight. Perfect for dry skin.</p>
+                    </div>
+                </div>
+
+                <div class="routine-step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h4>Rice Water Face Wash</h4>
+                        <p>Soak rice 30 minutes, save water. Use as final rinse after cleansing. Brightens and softens skin naturally.</p>
+                    </div>
+                </div>
+
+                <div class="routine-step">
+                    <div class="step-number">5</div>
+                    <div class="step-content">
+                        <h4>Honey Spot Treatment</h4>
+                        <p>Dab raw honey on blemishes before bed. Natural antibacterial properties fight acne and speed healing.</p>
+                    </div>
+                </div>
+
+                <div class="routine-step">
+                    <div class="step-number">6</div>
+                    <div class="step-content">
+                        <h4>Banana Hair Mask</h4>
+                        <p>Blend ripe banana with coconut milk. Apply to hair 20 minutes. Rinse well. Adds shine and moisture.</p>
+                    </div>
+                </div>
+
+                <div class="routine-step">
+                    <div class="step-number">7</div>
+                    <div class="step-content">
+                        <h4>Tomato Face Pack</h4>
+                        <p>Rub tomato slice on face, let dry 10 minutes. Rinse. Shrinks pores and controls oil naturally.</p>
+                    </div>
+                </div>
+
+                <h3 style="font-size: 14px; color: #8B6F47; margin: 15px 0 10px 1%;">Age-Specific Care</h3>
+
+                <div class="routine-step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h4>Teens (13-19)</h4>
+                        <p>Focus on gentle cleansing, oil control, acne treatment, and SPF. Start good habits early. Avoid harsh products.</p>
+                    </div>
+                </div>
+
+                <div class="routine-step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h4>20s</h4>
+                        <p>Prevention mode! Add antioxidants, vitamin C, sunscreen daily. Start eye cream. Build consistent routine.</p>
+                    </div>
+                </div>
+
+                <div class="routine-step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h4>30s</h4>
+                        <p>Introduce retinol, peptides, and hydrating serums. Focus on fine lines prevention. Use richer moisturizers at night.</p>
+                    </div>
+                </div>
+
+                <div class="routine-step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h4>40s+</h4>
+                        <p>Add firming creams, stronger retinoids, and intensive hydration. Consider professional treatments. Neck and hand care essential.</p>
+                    </div>
+                </div>
+
+                <h3 style="font-size: 14px; color: #8B6F47; margin: 15px 0 10px 1%;">Skin Concern Solutions</h3>
+
+                <div class="routine-step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h4>For Oily Skin</h4>
+                        <p>Use gel cleansers, salicylic acid toner, oil-free moisturizer, and mattifying sunscreen. Blot with oil papers, don't over-wash.</p>
+                    </div>
+                </div>
+
+                <div class="routine-step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h4>For Dry Skin</h4>
+                        <p>Cream cleansers, hydrating toners, hyaluronic acid serum, rich moisturizer. Use facial oils. Avoid hot water and harsh exfoliants.</p>
+                    </div>
+                </div>
+
+                <div class="routine-step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h4>For Acne-Prone Skin</h4>
+                        <p>Gentle non-stripping cleanser, BHA exfoliant, niacinamide serum, lightweight moisturizer. Spot treat with benzoyl peroxide or tea tree.</p>
+                    </div>
+                </div>
+
+                <div class="routine-step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h4>For Sensitive Skin</h4>
+                        <p>Fragrance-free gentle cleanser, soothing toner, centella or ceramide serum, barrier-repair moisturizer. Mineral sunscreen only.</p>
+                    </div>
+                </div>
+
+                <div class="routine-step">
+                    <div class="step-number">5</div>
+                    <div class="step-content">
+                        <h4>For Combination Skin</h4>
+                        <p>Balance is key. Use gentle products. Apply heavier creams on dry areas, lighter gel on oily T-zone. Multi-masking works great.</p>
+                    </div>
+                </div>
+
+                <div class="routine-step">
+                    <div class="step-number">6</div>
+                    <div class="step-content">
+                        <h4>For Hyperpigmentation</h4>
+                        <p>Vitamin C morning, alpha arbutin or kojic acid serum, niacinamide, AHA exfoliant 2x weekly. SPF 50+ is non-negotiable.</p>
+                    </div>
+                </div>
+
+                <div class="routine-step">
+                    <div class="step-number">7</div>
+                    <div class="step-content">
+                        <h4>For Large Pores</h4>
+                        <p>Double cleanse, BHA exfoliant, niacinamide serum, clay mask weekly. Pores don't shrink but appear smaller when clean.</p>
+                    </div>
+                </div>
+
+                <h3 style="font-size: 14px; color: #8B6F47; margin: 15px 0 10px 1%;">Quick Emergency Fixes</h3>
+
+                <div class="routine-step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h4>Overnight Pimple Fix</h4>
+                        <p>Apply ice 5 minutes to reduce swelling. Dab benzoyl peroxide or sulfur spot treatment. Place hydrocolloid patch overnight.</p>
+                    </div>
+                </div>
+
+                <div class="routine-step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h4>Instant Glow Before Event</h4>
+                        <p>Exfoliate gently, apply brightening sheet mask 15 minutes, moisturize well, use illuminating primer. Highlighter on high points.</p>
+                    </div>
+                </div>
+
+                <div class="routine-step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h4>Puffy Eyes Fix</h4>
+                        <p>Cold compress 5 minutes, caffeine eye cream, massage gently outward. Sleep elevated. Avoid salty food night before.</p>
+                    </div>
+                </div>
+
+                <div class="routine-step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h4>Sunburn Relief</h4>
+                        <p>Cool compress, aloe vera gel generously, take ibuprofen for inflammation. Hydrate heavily. Avoid sun until healed completely.</p>
+                    </div>
+                </div>
+
+                <div class="routine-step">
+                    <div class="step-number">5</div>
+                    <div class="step-content">
+                        <h4>Dry Patch Quick Fix</h4>
+                        <p>Gently exfoliate, apply thick layer of moisturizer or Vaseline. Let sit 10 minutes. Tissue off excess before makeup.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="tips" class="section">
+                <div class="card">
+                    <h3>🌴 Dealing with Philippine Heat</h3>
+                    <p>Keep blotting papers handy to absorb excess oil without removing makeup. Mist with thermal water to refresh skin throughout the day. Choose oil-free, non-comedogenic products.</p>
+                </div>
+
+                <div class="card">
+                    <h3>🏖️ Beach Day Protection</h3>
+                    <p>Apply sunscreen 30 minutes before sun exposure. Reapply every 2 hours and after swimming. Wear a wide-brimmed hat and seek shade during peak hours (10am-4pm).</p>
+                </div>
+
+                <div class="card">
+                    <h3>💊 Diet for Healthy Skin</h3>
+                    <p>Eat plenty of local fruits rich in vitamin C like calamansi, mango, and papaya. Stay hydrated with buko juice. Limit processed foods and excess sugar.</p>
+                </div>
+
+                <div class="card">
+                    <h3>😴 Beauty Sleep Matters</h3>
+                    <p>Get 7-8 hours of sleep. Use a silk pillowcase to reduce wrinkles and hair breakage. Apply overnight masks 2-3 times weekly for extra nourishment.</p>
+                </div>
+
+                <div class="card">
+                    <h3>🧴 Product Storage Tips</h3>
+                    <p>Store skincare in a cool, dry place. Vitamin C serums should be kept away from light. Check expiration dates regularly, especially in our hot climate.</p>
+                </div>
+
+                <div class="tip-box">
+                    <strong>💡 Budget-Friendly Tip:</strong>
+                    Many effective skincare ingredients are available in local markets! Rice water, papaya soap, virgin coconut oil, and calamansi are affordable and work wonders for Filipino skin. Consistency matters more than expensive products!
+                </div>
+
+                <div class="card">
+                    <h3>🚿 Post-Workout Skincare</h3>
+                    <p>After exercise, rinse face immediately with cool water to remove sweat. Follow with gentle cleanser and toner. Don't let sweat sit on skin as it can cause breakouts.</p>
+                </div>
+
+                <div class="card">
+                    <h3>🎨 Makeup and Skincare</h3>
+                    <p>Always prep skin with moisturizer and sunscreen before makeup. Use makeup remover or cleansing balm to thoroughly remove makeup every night. Never sleep with makeup on!</p>
+                </div>
+
+                <div class="card">
+                    <h3>🌧️ Rainy Season Care</h3>
+                    <p>During rainy season, skin can get dry. Use heavier moisturizers and don't skip sunscreen even on cloudy days. UV rays penetrate clouds.</p>
+                </div>
+
+                <div class="card">
+                    <h3>🏙️ Pollution Protection</h3>
+                    <p>Living in Metro Manila? Pollution clogs pores. Double cleanse nightly, use antioxidant serums, and consider products with anti-pollution ingredients.</p>
+                </div>
+
+                <div class="card">
+                    <h3>🧴 When to See a Dermatologist</h3>
+                    <p>For persistent acne, severe dark spots, or skin conditions, consult a dermatologist. Don't self-diagnose serious skin issues. Professional help is important.</p>
+                </div>
+
+                <div class="card">
+                    <h3>📱 Reduce Screen Time Effects</h3>
+                    <p>Blue light from phones and computers can affect skin. Use antioxidant serums, take breaks from screens, and apply eye cream to prevent early aging around eyes.</p>
+                </div>
+
+                <div class="card">
+                    <h3>🌊 Swimming Pool Care</h3>
+                    <p>Chlorine dries skin. Rinse immediately after swimming, apply moisturizer, and use waterproof sunscreen. Reapply every 40-80 minutes in water.</p>
+                </div>
+
+                <div class="tip-box">
+                    <strong>🌟 Glow-Boosting Secret:</strong>
+                    Mix a few drops of papaya enzyme or calamansi juice in your moisturizer for instant brightening. Use gugo bark for natural hair shine. Drink malunggay tea for inner glow. Beauty starts from within!
+                </div>
+
+                <div class="card">
+                    <h3>🍽️ Skin-Boosting Filipino Foods</h3>
+                    <p>Include monggo beans (vitamin B), malunggay (vitamins A, C, E), sinigang (vitamin C), and fresh fish (omega-3). These local foods nourish skin from inside.</p>
+                </div>
+
+                <div class="card">
+                    <h3>💧 Hydration Goals</h3>
+                    <p>Drink 8-10 glasses of water daily. In our hot climate, add buko juice, cucumber water, or calamansi water for electrolytes and extra hydration.</p>
+                </div>
+
+                <div class="card">
+                    <h3>🧼 Don't Over-Cleanse</h3>
+                    <p>Washing face too much strips natural oils, causing more oil production. Cleanse only twice daily—morning and night. Use blotting papers during the day instead.</p>
+                </div>
+
+                <div class="card">
+                    <h3>🌤️ Year-Round Sunscreen</h3>
+                    <p>UV index in Philippines is high all year. Wear sunscreen indoors too if near windows. Glass doesn't block UVA rays that cause aging and dark spots.</p>
+                </div>
+
+                <div class="card">
+                    <h3>🎯 Treat from Within</h3>
+                    <p>Vitamins matter! Take vitamin C for brightening, vitamin E for healing, and omega-3 for inflammation. Consult doctor before starting supplements.</p>
+                </div>
+
+                <div class="card">
+                    <h3>🛏️ Pillowcase Hygiene</h3>
+                    <p>Change pillowcase every 2-3 days. Bacteria and oil buildup cause breakouts. Use cotton or silk pillowcases for best results.</p>
+                </div>
+
+                <div class="card">
+                    <h3>🤲 Hand Washing Technique</h3>
+                    <p>After washing face, pat dry with clean towel. Don't rub vigorously. Rubbing causes irritation and premature wrinkles, especially around delicate eye area.</p>
+                </div>
+
+                <div class="card">
+                    <h3>🌡️ Cool Water Rinse</h3>
+                    <p>Finish cleansing with cool water to close pores and boost circulation. Hot water strips oils and damages skin barrier.</p>
+                </div>
+
+                <div class="card">
+                    <h3>📅 Track Your Cycle</h3>
+                    <p>Hormonal changes affect skin. Week before period, use spot treatments and clay masks. During period, focus on hydration and gentle care.</p>
+                </div>
+
+                <div class="card">
+                    <h3>🚫 Avoid These Mistakes</h3>
+                    <p>Don't pick pimples, skip sunscreen, sleep with makeup, use dirty brushes, or mix too many actives. These common mistakes damage skin barrier and cause scarring.</p>
+                </div>
+
+                <div class="card">
+                    <h3>✈️ Travel Skincare Kit</h3>
+                    <p>Pack mini sizes: cleanser, moisturizer, sunscreen, and sheet masks. Keep routine simple when traveling. Bring blotting papers for oil control.</p>
+                </div>
+
+                <div class="tip-box">
+                    <strong>👵 Lola's Wisdom:</strong>
+                    Our grandmothers knew best! Talumpaki (rice wash) for brightening, kalabasa (squash) for nourishment, and tamarind for exfoliation. Traditional remedies are effective, affordable, and gentle on morena skin. Honor these timeless beauty secrets!
+                </div>
+
+                <div class="card">
+                    <h3>💼 Office Skincare</h3>
+                    <p>Keep desk essentials: facial mist, hand cream, lip balm, and sunscreen. Reapply sunscreen if you sit near windows. Use humidifier to combat AC dryness.</p>
+                </div>
+
+                <div class="card">
+                    <h3>🎓 Ingredient Education</h3>
+                    <p>Learn to read labels. Avoid products with alcohol denat, fragrances, and harsh sulfates. Look for niacinamide, hyaluronic acid, ceramides, and peptides.</p>
+                </div>
+
+                <div class="card">
+                    <h3>🌅 Golden Hour Glow</h3>
+                    <p>Morning sunlight (before 9am) gives vitamin D. Just 10-15 minutes helps mood and bone health. Still wear sunscreen for longer exposure.</p>
+                </div>
+
+                <div class="card">
+                    <h3>🧊 Ice Therapy</h3>
+                    <p>Rub ice cube wrapped in cloth on face for 1-2 minutes. Reduces puffiness, tightens pores, boosts circulation. Great morning wake-up!</p>
+                </div>
+
+                <div class="card">
+                    <h3>🛁 Bath Time Benefits</h3>
+                    <p>Add milk powder or oatmeal to bath for soft skin. Don't use very hot water—it strips natural oils. Pat dry, apply lotion immediately.</p>
+                </div>
+
+                <div class="card">
+                    <h3>🌙 Beauty Sleep Position</h3>
+                    <p>Sleep on your back to prevent sleep lines and wrinkles. Side sleeping creates creases. Use silk pillowcase to reduce friction.</p>
+                </div>
+
+                <div class="card">
+                    <h3>💻 Blue Light Protection</h3>
+                    <p>Screens emit blue light that causes premature aging. Use sunscreen indoors, take screen breaks, and consider blue light filtering products.</p>
+                </div>
+
+                <div class="card">
+                    <h3>🌿 Natural vs Chemical Sunscreen</h3>
+                    <p>Mineral (zinc, titanium) sits on skin. Chemical absorbs UV. Both work! Choose based on skin type. Reapplication matters most.</p>
+                </div>
+
+                <div class="card">
+                    <h3>🎨 Makeup Expiration</h3>
+                    <p>Mascara: 3 months. Liquid foundation: 1 year. Powder products: 2 years. Old makeup harbors bacteria. When in doubt, throw it out!</p>
+                </div>
+
+                <div class="card">
+                    <h3>🚰 Water Quality Matters</h3>
+                    <p>Hard water can irritate skin. If your area has hard water, use micellar water for cleansing or install shower filter for softer water.</p>
+                </div>
+
+                <div class="card">
+                    <h3>🌶️ Spicy Food Effects</h3>
+                    <p>Spicy food can trigger redness in sensitive skin. Not harmful, but if you notice flare-ups after eating siling labuyo, reduce spice intake.</p>
+                </div>
+
+                <div class="card">
+                    <h3>🧴 Product Pilling Solutions</h3>
+                    <p>Products pilling? Wait longer between layers. Don't rub—pat products in. Check ingredient compatibility. Less is sometimes more!</p>
+                </div>
+
+                <div class="card">
+                    <h3>🌸 Hormonal Acne Management</h3>
+                    <p>Breakouts on jawline/chin often hormonal. Birth control or spironolactone can help. Consult dermatologist for persistent hormonal acne.</p>
+                </div>
+
+                <div class="card">
+                    <h3>🏪 Where to Buy</h3>
+                    <p>Watsons, Mercury Drug, SM Beauty, Lazada, Shopee all carry skincare. Check authenticity, read reviews, and compare prices before buying.</p>
+                </div>
+
+                <div class="tip-box">
+                    <strong>🎯 Realistic Expectations:</strong>
+                    Skincare takes time! Expect 4-6 weeks to see results from new products. 12 weeks for major improvements. No overnight miracles exist. Consistency, patience, and sun protection are the real secrets to beautiful Filipino skin. Trust the process!
+                </div>
+
+                <div class="card">
+                    <h3>👨‍⚕️ When to See Derma</h3>
+                    <p>Severe cystic acne, persistent rashes, suspicious moles, or no improvement after 3 months—see a dermatologist. Professional help is investment in your skin.</p>
+                </div>
+
+                <div class="card">
+                    <h3>🏋️ Gym Skincare</h3>
+                    <p>Remove makeup before workout. Tie hair back. Bring towel to wipe sweat. Cleanse immediately after. Carry cleansing wipes for emergencies.</p>
+                </div>
+
+                <div class="card">
+                    <h3>🎭 Mask-Wearing Skincare</h3>
+                    <p>Maskne is real! Use gentle cleanser, skip heavy makeup under mask, apply barrier cream, wash reusable masks daily. Let skin breathe at home.</p>
+                </div>
+
+                <div class="card">
+                    <h3>🌡️ Fever & Skin Care</h3>
+                    <p>When sick, keep routine simple. Gentle cleanser and moisturizer only. Skip actives. Hydrate extra. Your skin needs rest too when body fights illness.</p>
+                </div>
+
+                <div class="card">
+                    <h3>🎨 Makeup Primer Alternatives</h3>
+                    <p>Save money—use aloe gel or light moisturizer as primer. Sunscreen can work as primer too. Not all steps need special products.</p>
+                </div>
+
+                <div class="card">
+                    <h3>🌙 Night Shift Workers</h3>
+                    <p>Irregular schedule affects skin. Maintain routine whenever you wake/sleep. Use blackout curtains. Vitamin B3 helps skin adapt to stress.</p>
+                </div>
+
+                <div class="card">
+                    <h3>📸 Photo-Ready Skin</h3>
+                    <p>Week before big event: hydrate, sleep well, no new products. Day of: ice face, sheet mask, skip shimmer on oily areas. Matte finish photographs best.</p>
+                </div>
+
+                <div class="card">
+                    <h3>🌊 Hard Water Solutions</h3>
+                    <p>Hard water leaves residue. Use filtered water for final rinse, micellar water to cleanse, or install shower filter. Add extra hydration to routine.</p>
+                </div>
+
+                <div class="card">
+                    <h3>🎪 Festival/Concert Skincare</h3>
+                    <p>Pre-event: hydrate and moisturize well. During: blotting papers, setting spray, sunscreen reapplication. Post-event: double cleanse thoroughly, sheet mask recovery.</p>
+                </div>
+
+                <div class="card">
+                    <h3>🏖️ Island Hopping Care</h3>
+                    <p>Waterproof SPF 50+, reef-safe sunscreen to protect corals. Bring after-sun aloe. Rinse salt water immediately. Rehydrate skin and body constantly.</p>
+                </div>
+
+                <div class="card">
+                    <h3>🚗 Car Commute Protection</h3>
+                    <p>UV rays penetrate car windows. Apply sunscreen even for short drives. Window tinting helps but doesn't eliminate UV exposure completely.</p>
+                </div>
+
+                <div class="card">
+                    <h3>🎓 Graduation Day Glow</h3>
+                    <p>Start prep 2 weeks before: consistent routine, hydration, sleep. Week before: professional facial optional. Day of: light makeup, blotting papers, setting spray.</p>
+                </div>
+
+                <div class="card">
+                    <h3>💐 Wedding Prep Timeline</h3>
+                    <p>6 months: establish routine. 3 months: professional treatments. 1 month: no new products. Week of: hydration focus. Day before: early sleep, sheet mask.</p>
+                </div>
+
+                <div class="card">
+                    <h3>🏃 Athletic Skin Protection</h3>
+                    <p>Athletes need sport sunscreen (water/sweat resistant). Cleanse ASAP post-game. Use lightweight products that won't clog during intense activity.</p>
+                </div>
+
+                <div class="tip-box">
+                    <strong>💪 Consistency Over Perfection:</strong>
+                    Miss a day? Don't stress! One skipped routine won't ruin progress. Just resume tomorrow. Life happens—fiesta, lakwatsa, busy days. Skincare is self-care, not another source of stress. Be kind to yourself and your skin!
+                </div>
+
+                <div class="card">
+                    <h3>🎤 Special Occasion Makeup Prep</h3>
+                    <p>Morning of event: gentle cleanser, hydrating toner, serum, light moisturizer, sunscreen. Let each layer absorb. Wait 15 minutes before makeup application.</p>
+                </div>
+
+                <div class="card">
+                    <h3>🌾 Rice Fields Air Quality</h3>
+                    <p>Rural air has less pollution but more dust. Cleanse thoroughly. Farmers need extra sunscreen—outdoor UV exposure higher. Natural lifestyle = glowing skin.</p>
+                </div>
+
+                <div class="card">
+                    <h3>🎒 College Dorm Skincare</h3>
+                    <p>Limited space? Multi-purpose products save room. Shared bathrooms? Keep products in caddy. Late nights? At least remove makeup before bed.</p>
+                </div>
+
+                <div class="card">
+                    <h3>👨‍🍳 Kitchen Accidents</h3>
+                    <p>Cooking burns? Run under cool water 10 minutes. Apply aloe gel. Don't use ice directly. See doctor for serious burns. Prevention: tie hair, focus while cooking.</p>
+                </div>
+
+                <div class="tip-box">
+                    <strong>🇵🇭 Pinoy Pride Skincare:</strong>
+                    Filipino skin is resilient, beautiful, and unique. Morena, mestiza, or any shade—embrace it! Our tropical heritage gave us naturally glowing skin. Honor your kayumanggi beauty. Skincare enhances what's already beautiful!
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showSection(sectionId) {
+            const sections = document.querySelectorAll('.section');
+            const tabs = document.querySelectorAll('.tab');
+            
+            sections.forEach(section => {
+                section.classList.remove('active');
+            });
+            
+            tabs.forEach(tab => {
+                tab.classList.remove('active');
+            });
+            
+            document.getElementById(sectionId).classList.add('active');
+            event.target.classList.add('active');
+        }
+    </script>
+</body>
+</html>
